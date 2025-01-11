@@ -1,20 +1,25 @@
 import { useState } from "react";
+import Accordion from "./components/Accordion";
 
 function App() {
-  return (
-    <>
+  const items = [
+    {
+      title: "Accordion 1",
+      content: "Content 1",
+    },
+    {
+      title: "Accordion 2",
+      content: "Content 2",
+    },
+    {
+      title: "Accordion 3",
+      content: "Content 3",
+    },
+  ];
 
-      <h1>React Starter Project</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.js</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+  return <Accordion items = {items} />;
+  
+  
 }
 
 export default App;
