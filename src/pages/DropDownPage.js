@@ -1,5 +1,5 @@
-import React from "react";
-import Dropdown from "./components/Dropdown";
+import {React,useState} from "react";
+import Dropdown from "../components/Dropdown";
 function DropDownPage() {
   const [selection, setSelection] = useState(null);
 
@@ -14,7 +14,7 @@ function DropDownPage() {
   ];
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center">
       <Dropdown value={selection} onChange={handleSelect} options={options} />
       <Dropdown value={selection} onChange={handleSelect} options={options} />
     </div>
