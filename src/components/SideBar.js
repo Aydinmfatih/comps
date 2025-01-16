@@ -8,12 +8,12 @@ function SideBar() {
   ];
 
   const linkElements = links.map((link) => (
-    <Link to={link.path} key={link.path}>
+    <Link activeClassName='font-bold border-l-4 border-blue-500 pl-2' to={link.path} key={link.path}>
       {link.label}
     </Link>
   ));
   return (
-    <div className="sticky top-0 overflow-y-scroll flex flex-col">
+    <div className="sticky top-0 items-start flex flex-col">
       {linkElements}
     </div>
   );
