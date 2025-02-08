@@ -5,6 +5,7 @@ function SortableTable(props) {
   const { config, data } = props;
   const [sortOrder, setSortOrder] = useState(null);
   const [sortBy, setSortBy] = useState(null);
+
   const handleClick = (column) => {
     if (sortOrder === null) {
       setSortOrder("asc");
@@ -32,6 +33,7 @@ function SortableTable(props) {
   });
 
   let sortedData = data;
+  
   if (sortOrder && sortBy) {
     const {sortValue} = config.find(column => column.label === sortBy);
     sortedData = [...data].sort((a, b) => {
